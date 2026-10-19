@@ -1,137 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Osmanlı Tanker Araç Üstü Ekipman. Su tankerleri, arazözler, tank imalatı, tanker tamiri ve pompa tesisatı.">
-  <meta name="theme-color" content="#171717">
-  <title>Osmanlı Tanker | Araç Üstü Ekipman</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Osmanlı Tanker Araç Üstü Ekipman. Su tankerleri, arazözler, tank imalatı, tanker tamiri ve pompa tesisatı." name="description"/>
+<meta content="#0b0c0f" name="theme-color"/>
+<title>Osmanlı Tanker | Araç Üstü Ekipman</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="dark.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="topline">İmalat • Tamir • Bakım • Araç Üstü Ekipman</div>
-  <header class="header">
-    <a class="brand" href="#anasayfa" aria-label="Osmanlı Tanker ana sayfa">
-      <span class="brand-mark">OT</span>
-      <span><strong>OSMANLI TANKER</strong><small>ARAÇ ÜSTÜ EKİPMAN</small></span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç/kapat">☰</button>
-    <nav id="nav">
-      <a href="#anasayfa">Ana Sayfa</a>
-      <a href="#urunler">Ürünlerimiz</a>
-      <a href="#hizmetler">Hizmetlerimiz</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="anasayfa">
-      <div class="hero-copy">
-        <p class="eyebrow">OSMANLI TANKER</p>
-        <h1>İşinize güç katan<br><span>sağlam çözümler.</span></h1>
-        <p class="hero-text">Araç üstü ekipman, tanker imalatı, tamir ve tesisat çözümleri için bizimle iletişime geçin.</p>
-        <div class="hero-actions">
-          <a class="button button-red" href="#urunler">Ürün kataloğu</a>
-          <a class="button button-outline" href="https://wa.me/905376535027?text=Merhaba%2C%20Osmanl%C4%B1%20Tanker%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan sor</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-badge"><span class="dot"></span> İmalat ve teknik çözümler</div>
-        <div class="hero-illustration" aria-label="Tanker aracı temsili çizimi">
-          <svg viewBox="0 0 620 300" role="img" aria-label="Tanker kamyonu çizimi">
-            <defs><linearGradient id="tank" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f5f5f5"/><stop offset="1" stop-color="#a8adb3"/></linearGradient></defs>
-            <ellipse cx="312" cy="255" rx="250" ry="16" fill="#000" opacity=".25"/>
-            <path d="M72 126 Q72 94 106 94 H390 Q418 94 418 126 V204 H72 Z" fill="url(#tank)" stroke="#777" stroke-width="3"/>
-            <path d="M92 111 H396" stroke="#fff" stroke-width="5" opacity=".9"/>
-            <path d="M91 178 H398" stroke="#6b7280" stroke-width="5"/>
-            <rect x="86" y="195" width="330" height="12" rx="3" fill="#b91c1c"/>
-            <path d="M418 148 H482 L535 190 V207 H418 Z" fill="#c7cbd0" stroke="#777" stroke-width="3"/>
-            <path d="M470 157 H489 L516 184 H470 Z" fill="#1f2937"/>
-            <rect x="435" y="193" width="29" height="7" fill="#fef3c7"/>
-            <rect x="75" y="207" width="462" height="13" rx="3" fill="#374151"/>
-            <rect x="100" y="220" width="26" height="20" fill="#6b7280"/>
-            <rect x="361" y="220" width="26" height="20" fill="#6b7280"/>
-            <rect x="444" y="220" width="26" height="20" fill="#6b7280"/>
-            <g fill="#171717" stroke="#6b7280" stroke-width="5">
-              <circle cx="125" cy="239" r="27"/><circle cx="125" cy="239" r="10" fill="#d1d5db"/>
-              <circle cx="382" cy="239" r="27"/><circle cx="382" cy="239" r="10" fill="#d1d5db"/>
-              <circle cx="465" cy="239" r="27"/><circle cx="465" cy="239" r="10" fill="#d1d5db"/>
-            </g>
-            <path d="M100 86 H390" stroke="#dc2626" stroke-width="7" stroke-linecap="round"/>
-            <rect x="178" y="74" width="58" height="12" rx="4" fill="#dc2626"/>
-            <rect x="267" y="74" width="58" height="12" rx="4" fill="#dc2626"/>
-            <text x="246" y="153" text-anchor="middle" font-size="24" font-weight="800" fill="#30343b">OSMANLI</text>
-            <text x="246" y="169" text-anchor="middle" font-size="10" letter-spacing="3" fill="#555">TANKER</text>
-          </svg>
-        </div>
-        <p class="visual-caption">İhtiyaca uygun ekipman. İşe uygun çözüm.</p>
-      </div>
-    </section>
-
-    <section class="section" id="urunler">
-      <div class="section-heading">
-        <div><p class="eyebrow">ÜRÜN KATALOĞU</p><h2>Ürünlerimiz</h2></div>
-        <p>Ürün hakkında detay ve fiyat bilgisi almak için WhatsApp üzerinden bize ulaşabilirsiniz.</p>
-      </div>
-      <div class="filters" id="filters" aria-label="Ürün kategorileri">
-        <button class="filter active" data-filter="Tümü">Tümü</button>
-        <button class="filter" data-filter="Tankerler">Tankerler</button>
-        <button class="filter" data-filter="Arazözler">Arazözler</button>
-        <button class="filter" data-filter="Tanklar">Tanklar</button>
-        <button class="filter" data-filter="Pompa ve Tesisat">Pompa ve Tesisat</button>
-        <button class="filter" data-filter="Tamir ve Bakım">Tamir ve Bakım</button>
-      </div>
-      <div class="product-grid" id="productGrid">
-        <article class="product-card" data-category="Tankerler">
-          <div class="product-art art-tanker"><span>01</span><div class="mini-tank"></div></div>
-          <div class="product-info"><p class="category">TANKERLER</p><h3>Araç Üstü Tankerler</h3><p>İhtiyaca ve araç tipine uygun tanker çözümleri.</p><a class="text-link" href="https://wa.me/905376535027?text=Ara%C3%A7%20%C3%BCst%C3%BC%20tankerler%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi al <span>↗</span></a></div>
-        </article>
-        <article class="product-card" data-category="Arazözler">
-          <div class="product-art art-water"><span>02</span><div class="water-lines"></div></div>
-          <div class="product-info"><p class="category">ARAZÖZLER</p><h3>Su Tankeri ve Arazöz</h3><p>Sulama, yol yıkama ve su taşıma uygulamaları.</p><a class="text-link" href="https://wa.me/905376535027?text=Su%20tankeri%20ve%20araz%C3%B6z%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi al <span>↗</span></a></div>
-        </article>
-        <article class="product-card" data-category="Tanklar">
-          <div class="product-art art-storage"><span>03</span><div class="storage-tank"></div></div>
-          <div class="product-info"><p class="category">TANKLAR</p><h3>Depolama Tankları</h3><p>Yatay ve dikey depolama tankı imalat çözümleri.</p><a class="text-link" href="https://wa.me/905376535027?text=Depolama%20tanklar%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi al <span>↗</span></a></div>
-        </article>
-        <article class="product-card" data-category="Pompa ve Tesisat">
-          <div class="product-art art-pump"><span>04</span><div class="pump-shape">P</div></div>
-          <div class="product-info"><p class="category">POMPA VE TESİSAT</p><h3>Pompa ve Tesisat Sistemleri</h3><p>Pompa, bağlantı ve araç üstü tesisat çözümleri.</p><a class="text-link" href="https://wa.me/905376535027?text=Pompa%20ve%20tesisat%20sistemleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi al <span>↗</span></a></div>
-        </article>
-        <article class="product-card" data-category="Tamir ve Bakım">
-          <div class="product-art art-repair"><span>05</span><div class="wrench">⚙</div></div>
-          <div class="product-info"><p class="category">TAMİR VE BAKIM</p><h3>Tanker Tamiri</h3><p>Onarım, kaynak ve ekipman yenileme hizmetleri.</p><a class="text-link" href="https://wa.me/905376535027?text=Tanker%20tamiri%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Bilgi al <span>↗</span></a></div>
-        </article>
-        <article class="product-card" data-category="Pompa ve Tesisat">
-          <div class="product-art art-custom"><span>06</span><div class="custom-lines">OT</div></div>
-          <div class="product-info"><p class="category">ÖZEL İMALAT</p><h3>Projeye Özel Çözümler</h3><p>İşinize ve kullanım alanınıza göre özel imalat.</p><a class="text-link" href="https://wa.me/905376535027?text=Projeye%20%C3%B6zel%20imalat%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" rel="noopener">Bilgi al <span>↗</span></a></div>
-        </article>
-      </div>
-      <p class="note">Not: Kartlardaki görseller ilk tasarım için temsili çizimlerdir. Gerçek ürün fotoğraflarınızla değiştirebiliriz.</p>
-    </section>
-
-    <section class="services" id="hizmetler">
-      <div class="services-intro"><p class="eyebrow">HİZMETLERİMİZ</p><h2>İhtiyacınıza uygun<br>teknik destek.</h2><p>Ürün, imalat veya tamir ihtiyacınızı paylaşın; detayları birlikte değerlendirelim.</p></div>
-      <div class="service-list">
-        <div><span>01</span><strong>Tanker ve tank imalatı</strong><span class="arrow">↗</span></div>
-        <div><span>02</span><strong>Arazöz ve su tankeri ekipmanları</strong><span class="arrow">↗</span></div>
-        <div><span>03</span><strong>Pompa ve tesisat uygulamaları</strong><span class="arrow">↗</span></div>
-        <div><span>04</span><strong>Kaynak, tamir ve bakım</strong><span class="arrow">↗</span></div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="iletisim">
-      <div><p class="eyebrow">İLETİŞİM</p><h2>Projenizi konuşalım.</h2><p>Ürün bilgisi, teklif veya servis talepleriniz için bize ulaşın.</p></div>
-      <div class="contact-cards">
-        <a href="tel:+905376535027" class="contact-card"><span class="contact-icon">☎</span><span><small>TELEFON</small><strong>0537 653 50 27</strong></span></a>
-        <a href="https://wa.me/905376535027" target="_blank" rel="noopener" class="contact-card"><span class="contact-icon">✆</span><span><small>WHATSAPP</small><strong>Mesaj gönder</strong></span></a>
-        <div class="contact-card"><span class="contact-icon">⌖</span><span><small>ADRES</small><strong>Ostim, Yenimahalle / Ankara</strong></span></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer"><a class="brand footer-brand" href="#anasayfa"><span class="brand-mark">OT</span><span><strong>OSMANLI TANKER</strong><small>ARAÇ ÜSTÜ EKİPMAN</small></span></a><span>© <span id="year"></span> Osmanlı Tanker. Tüm hakları saklıdır.</span><a href="#anasayfa">Yukarı çık ↑</a></footer>
-  <a class="floating-whatsapp" href="https://wa.me/905376535027?text=Merhaba%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geç">WhatsApp ↗</a>
-  <script src="script.js"></script>
+<div class="topline">İmalat • Tamir • Bakım • Araç Üstü Ekipman</div>
+<header class="header">
+<a aria-label="Osmanlı Tanker ana sayfa" class="brand" href="#anasayfa">
+<span class="brand-mark">OT</span>
+<span><strong>OSMANLI TANKER</strong><small>ARAÇ ÜSTÜ EKİPMAN</small></span>
+</a>
+<button aria-label="Menüyü aç/kapat" class="menu-toggle" id="menuToggle">☰</button>
+<nav id="nav">
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#urunler">Ürünlerimiz</a>
+<a href="#galeri">Galeri</a><a href="#hizmetler">Hizmetlerimiz</a>
+<a href="#iletisim">İletişim</a>
+</nav>
+</header>
+<main>
+<section class="hero" id="anasayfa">
+<div class="hero-copy">
+<p class="eyebrow">OSMANLI TANKER</p>
+<h1>GÜCÜNÜZÜN<br/><span>ARKASINDA BİZ VARIZ.</span></h1>
+<p class="hero-text">Su tankeri, arazöz, araç üstü ekipman imalatı ve tanker bakım-onarımında güvenilir çözümler. Ankara Ostim’de hizmetinizdeyiz.</p>
+<div class="hero-actions">
+<a class="button button-red" href="#urunler">Ürün kataloğu</a>
+<a class="button button-outline" href="https://wa.me/905376535027?text=Merhaba%2C%20Osmanl%C4%B1%20Tanker%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener" target="_blank">WhatsApp'tan sor</a>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-badge"><span class="dot"></span> İmalat ve teknik çözümler</div>
+<div aria-label="Tanker aracı temsili çizimi" class="hero-illustration"><img alt="Osmanlı Tanker imalatı büyük yatay tanker" class="hero-photo" src="fotograflar/hero.jpg"/></div>
+<p class="visual-caption">GÜÇLÜ İMALAT. SAĞLAM ÇÖZÜMLER.</p>
+</div>
+</section>
+<section class="section" id="urunler">
+<div class="section-heading">
+<div><p class="eyebrow">ÜRÜN KATALOĞU</p><h2>Ürünlerimiz</h2></div>
+<p>Ürün hakkında detay ve fiyat bilgisi almak için WhatsApp üzerinden bize ulaşabilirsiniz.</p>
+</div>
+<div aria-label="Ürün kategorileri" class="filters" id="filters">
+<button class="filter active" data-filter="Tümü">Tümü</button>
+<button class="filter" data-filter="Tankerler">Tankerler</button>
+<button class="filter" data-filter="Arazözler">Arazözler</button>
+<button class="filter" data-filter="Tanklar">Tanklar</button>
+<button class="filter" data-filter="Pompa ve Tesisat">Pompa ve Tesisat</button>
+<button class="filter" data-filter="Tamir ve Bakım">Tamir ve Bakım</button>
+</div>
+<div class="product-grid" id="productGrid">
+<article class="product-card" data-category="Tankerler">
+<div class="product-art art-tanker"><img alt="Araç üstü tanker uygulaması" class="product-photo" loading="lazy" src="fotograflar/arac-ustu-tanker.jpg"/></div>
+<div class="product-info"><p class="category">TANKERLER</p><h3>Araç Üstü Tankerler</h3><p>İhtiyaca ve araç tipine uygun tanker çözümleri.</p><a class="text-link" href="https://wa.me/905376535027?text=Ara%C3%A7%20%C3%BCst%C3%BC%20tankerler%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener" target="_blank">Bilgi al <span>↗</span></a></div>
+</article>
+<article class="product-card" data-category="Arazözler">
+<div class="product-art art-water"><img alt="Su tankeri aracı" class="product-photo" loading="lazy" src="fotograflar/su-tankeri.jpg"/></div>
+<div class="product-info"><p class="category">ARAZÖZLER</p><h3>Su Tankeri ve Arazöz</h3><p>Sulama, yol yıkama ve su taşıma uygulamaları.</p><a class="text-link" href="https://wa.me/905376535027?text=Su%20tankeri%20ve%20araz%C3%B6z%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener" target="_blank">Bilgi al <span>↗</span></a></div>
+</article>
+<article class="product-card" data-category="Tanklar">
+<div class="product-art art-storage"><img alt="Atölyede üretilen yatay depolama tankı" class="product-photo" loading="lazy" src="fotograflar/depolama-tanki.jpg"/></div>
+<div class="product-info"><p class="category">TANKLAR</p><h3>Depolama Tankları</h3><p>Yatay ve dikey depolama tankı imalat çözümleri.</p><a class="text-link" href="https://wa.me/905376535027?text=Depolama%20tanklar%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener" target="_blank">Bilgi al <span>↗</span></a></div>
+</article>
+<article class="product-card" data-category="Pompa ve Tesisat">
+<div class="product-art art-pump"><img alt="Tanker pompa ve boru tesisatı" class="product-photo" loading="lazy" src="fotograflar/pompa-tesisat.jpg"/></div>
+<div class="product-info"><p class="category">POMPA VE TESİSAT</p><h3>Pompa ve Tesisat Sistemleri</h3><p>Pompa, bağlantı ve araç üstü tesisat çözümleri.</p><a class="text-link" href="https://wa.me/905376535027?text=Pompa%20ve%20tesisat%20sistemleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener" target="_blank">Bilgi al <span>↗</span></a></div>
+</article>
+<article class="product-card" data-category="Tamir ve Bakım">
+<div class="product-art art-repair"><img alt="Atölyede tanker imalatı" class="product-photo" loading="lazy" src="fotograflar/tanker-imalat.jpg"/></div>
+<div class="product-info"><p class="category">TAMİR VE BAKIM</p><h3>Tanker Tamiri</h3><p>Onarım, kaynak ve ekipman yenileme hizmetleri.</p><a class="text-link" href="https://wa.me/905376535027?text=Tanker%20tamiri%20i%C3%A7in%20bilgi%20almak%20istiyorum." rel="noopener" target="_blank">Bilgi al <span>↗</span></a></div>
+</article>
+<article class="product-card" data-category="Pompa ve Tesisat">
+<div class="product-art art-custom"><img alt="Özel imalat çelik tank" class="product-photo" loading="lazy" src="fotograflar/ozel-imalat.jpg"/></div>
+<div class="product-info"><p class="category">ÖZEL İMALAT</p><h3>Projeye Özel Çözümler</h3><p>İşinize ve kullanım alanınıza göre özel imalat.</p><a class="text-link" href="https://wa.me/905376535027?text=Projeye%20%C3%B6zel%20imalat%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." rel="noopener" target="_blank">Bilgi al <span>↗</span></a></div>
+</article>
+</div>
+<p class="note">Fotoğraflar Osmanlı Tanker çalışma ve imalat görsellerinden derlenmiştir. Projeye göre ürün özellikleri değişebilir.</p>
+</section>
+<section class="section gallery-section" id="galeri"><div class="section-heading"><div><p class="eyebrow">ATÖLYEMİZDEN</p><h2>İmalat Galerisi</h2></div><p>Gerçek üretim ve uygulama fotoğraflarımız.</p></div><div class="gallery-grid"><a class="gallery-item" href="fotograflar/akaryakit-tanki.jpg" rel="noopener" target="_blank"><img alt="Yakıt tankı ve dolum ekipmanı" loading="lazy" src="fotograflar/akaryakit-tanki.jpg"/></a><a class="gallery-item" href="fotograflar/dolum-unitesi.jpg" rel="noopener" target="_blank"><img alt="Tanker dolum ünitesi" loading="lazy" src="fotograflar/dolum-unitesi.jpg"/></a><a class="gallery-item" href="fotograflar/buyuk-depo.jpg" rel="noopener" target="_blank"><img alt="Büyük yatay tank sevkiyatı" loading="lazy" src="fotograflar/buyuk-depo.jpg"/></a><a class="gallery-item" href="fotograflar/tanker-detay.jpg" rel="noopener" target="_blank"><img alt="Tank ön yüz ve dolum kabini" loading="lazy" src="fotograflar/tanker-detay.jpg"/></a></div></section><section class="services" id="hizmetler">
+<div class="services-intro"><p class="eyebrow">HİZMETLERİMİZ</p><h2>İhtiyacınıza uygun<br/>teknik destek.</h2><p>Ürün, imalat veya tamir ihtiyacınızı paylaşın; detayları birlikte değerlendirelim.</p></div>
+<div class="service-list">
+<div><span>01</span><strong>Tanker ve tank imalatı</strong><span class="arrow">↗</span></div>
+<div><span>02</span><strong>Arazöz ve su tankeri ekipmanları</strong><span class="arrow">↗</span></div>
+<div><span>03</span><strong>Pompa ve tesisat uygulamaları</strong><span class="arrow">↗</span></div>
+<div><span>04</span><strong>Kaynak, tamir ve bakım</strong><span class="arrow">↗</span></div>
+</div>
+</section>
+<section class="contact-section" id="iletisim">
+<div><p class="eyebrow">İLETİŞİM</p><h2>Projenizi konuşalım.</h2><p>Ürün bilgisi, teklif veya servis talepleriniz için bize ulaşın.</p></div>
+<div class="contact-cards">
+<a class="contact-card" href="tel:+905376535027"><span class="contact-icon">☎</span><span><small>TELEFON</small><strong>0537 653 50 27</strong></span></a>
+<a class="contact-card" href="https://wa.me/905376535027" rel="noopener" target="_blank"><span class="contact-icon">✆</span><span><small>WHATSAPP</small><strong>Mesaj gönder</strong></span></a>
+<div class="contact-card"><span class="contact-icon">⌖</span><span><small>ADRES</small><strong>Ostim, Yenimahalle / Ankara</strong></span></div>
+</div>
+</section>
+</main>
+<footer class="footer"><a class="brand footer-brand" href="#anasayfa"><span class="brand-mark">OT</span><span><strong>OSMANLI TANKER</strong><small>ARAÇ ÜSTÜ EKİPMAN</small></span></a><span>© <span id="year"></span> Osmanlı Tanker. Tüm hakları saklıdır.</span><a href="#anasayfa">Yukarı çık ↑</a></footer>
+<a aria-label="WhatsApp ile iletişime geç" class="floating-whatsapp" href="https://wa.me/905376535027?text=Merhaba%2C%20bilgi%20almak%20istiyorum." rel="noopener" target="_blank">WhatsApp ↗</a>
+<script src="script.js"></script>
 </body>
 </html>

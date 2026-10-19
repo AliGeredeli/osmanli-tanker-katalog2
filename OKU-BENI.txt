@@ -1,0 +1,8 @@
+OSMANLI TANKER — SİYAH-KIRMIZI TASARIM + GERÇEK FOTOĞRAFLAR
+
+GitHub deposundaki ana dizine index.html, style.css, dark.css, script.js ve fotograflar klasörünü yükleyin.
+ÖNEMLİ: index.html ile birlikte fotograflar klasörünün tamamı yüklenmeli.
+GitHub Pages için DNS, özel alan adı ve HTTPS ayarlarına dokunmayın.
+Ana sayfayı bilgisayarda denemek için index.html dosyasını açabilirsiniz.
+
+Fotoğraflar kullanıcı tarafından sağlanmıştır.
