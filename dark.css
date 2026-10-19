@@ -20,3 +20,35 @@ nav a{color:#e5e5e7}nav a:hover{color:#ff4051}
 
 /* Gerçek fotoğraflar ve galeri */
 .hero-illustration{padding-top:44px}.hero-photo{display:block;width:100%;height:370px;object-fit:cover;border-radius:8px;border:1px solid #3b3b44;box-shadow:0 28px 65px #0009}.product-art .product-photo{width:100%;height:100%;object-fit:cover;display:block}.gallery-section{background:#111217}.gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.gallery-item{display:block;overflow:hidden;border-radius:6px;border:1px solid #32333b;aspect-ratio:4/3}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.gallery-item:hover img{transform:scale(1.05)}@media(max-width:850px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-photo{height:330px}}@media(max-width:560px){.hero-photo{height:250px}.gallery-grid{gap:9px}}
+
+
+/* Osmanlı Tanker: gerçek logo, fotoğraf slaytı ve kırpılmayan ürün görselleri */
+.brand-logo{height:64px;width:64px;object-fit:contain;flex-shrink:0;border-radius:50%;background:#000;border:1px solid #ad873f}
+.brand-wordmark{display:block}.brand-wordmark strong{font-size:15px}.brand-wordmark small{font-size:9px}
+.footer-brand .brand-logo{width:52px;height:52px}
+.hero-illustration{padding-top:44px}
+.hero-slider{position:relative;width:100%;height:385px;border:1px solid #4b4140;border-radius:12px;overflow:hidden;background:#111;box-shadow:0 22px 55px #0008}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .75s ease,visibility .75s;display:flex;align-items:center;justify-content:center}
+.slide.active{opacity:1;visibility:visible}
+.slide img{width:100%;height:100%;object-fit:contain;display:block}
+.slide-label{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 19px;color:#fff;font-size:14px;font-weight:800;letter-spacing:.04em;background:linear-gradient(transparent,#000d);text-shadow:0 2px 5px #000}
+.slide-arrow{position:absolute;z-index:2;top:46%;transform:translateY(-50%);width:39px;height:44px;background:#111a;border:1px solid #ffffff60;color:#fff;border-radius:6px;cursor:pointer;font-size:20px}
+.slide-arrow:hover,.slide-arrow:focus-visible{background:#a9823a;color:#000}.slide-prev{left:10px}.slide-next{right:10px}
+.slide-dots{position:absolute;z-index:2;bottom:12px;right:14px;display:flex;gap:7px}
+.slide-dot{width:9px;height:9px;padding:0;border-radius:50%;border:1px solid #fff;background:#ffffff60;cursor:pointer}.slide-dot.active{background:#e6b957;width:24px;border-radius:8px}
+.product-art{height:250px;background:#111318}.product-art:after{display:none}.product-art .product-photo{object-fit:contain;object-position:center;background:#17191e}
+.gallery-item{aspect-ratio:4/3;background:#17191e}.gallery-item img{object-fit:contain;background:#17191e}
+@media(max-width:850px){.hero-slider{height:350px}}
+@media(max-width:560px){.brand-logo{height:48px;width:48px}.brand-wordmark strong{font-size:12px}.brand-wordmark small{font-size:7px}.hero-slider{height:265px}.slide-label{font-size:12px;padding:20px 15px}.slide-arrow{width:31px;height:37px}.product-art{height:235px}}
+@media(prefers-reduced-motion:reduce){.slide{transition:none}}
+
+/* Hakkımızda başlığı siyah; galeri kaldırıldı */
+.about-section h2{color:#050505!important}
+.about-section{background:#f5f2ec!important;color:#1b1b1b!important}
+.about-section p,.about-section h3{color:#252525!important}
+.video-tabs{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.video-tab{border:1px solid #ae8a46;border-radius:5px;background:#171717;color:#f2dfb5;padding:9px 14px;font-weight:700;cursor:pointer}
+.video-tab.active{background:#c49a4c;color:#101010}
+.hero-video[hidden]{display:none!important}
+.hero-video-container .hero-video{width:100%;max-height:380px;aspect-ratio:16/10;object-fit:contain;background:#101010;border-radius:7px}
+@media(max-width:560px){.hero-video-container .hero-video{max-height:270px}}

@@ -1,0 +1,1 @@
+Güncellemeler: Tanker Tamiri ürün kartı kaldırıldı (hizmetlerde kalır). Araç Üstü Tankerler yerine Taşınabilir Akaryakıt Tankları ve 3 gri tank fotoğrafı kondu; eski kamyon fotoğrafı bu karttan çıkarıldı. Yeni büyük gri tank fotoğrafı Depolama Tankları slaytına eklendi. Motorlu Su Pompaları görselleri henüz tespit edilmediği için boş alan korunuyor. Canlı site değiştirilmedi.

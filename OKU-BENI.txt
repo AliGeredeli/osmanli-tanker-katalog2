@@ -1,8 +1,1 @@
-OSMANLI TANKER — SİYAH-KIRMIZI TASARIM + GERÇEK FOTOĞRAFLAR
-
-GitHub deposundaki ana dizine index.html, style.css, dark.css, script.js ve fotograflar klasörünü yükleyin.
-ÖNEMLİ: index.html ile birlikte fotograflar klasörünün tamamı yüklenmeli.
-GitHub Pages için DNS, özel alan adı ve HTTPS ayarlarına dokunmayın.
-Ana sayfayı bilgisayarda denemek için index.html dosyasını açabilirsiniz.
-
-Fotoğraflar kullanıcı tarafından sağlanmıştır.
+Osmanlı Tanker katalog güncellemesi: 13 yeni ürün görseli eklendi. İlk 3 su monitörü (1 adet 2 inç, 2 adet 2,5 inç), sonraki 3 ön sulama başlığı, sonraki 3 arka sulama başlığı, son 4 redüktörlü su pompası. index.html dosyasını açarak inceleyin. GitHub’a yüklerken klasör yapısını koruyun.
