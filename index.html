@@ -11,7 +11,12 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Osmanlı Tanker","url":"https://www.osmanlitanker.net/","telephone":"+905376535027","description":"Ankara Ostim'de su tankeri, arazöz, depolama tankı ve araç üstü ekipman imalatı, tanker bakım ve onarımı.","address":{"@type":"PostalAddress","streetAddress":"1235. Cadde No:89, Ostim","addressLocality":"Yenimahalle","addressRegion":"Ankara","addressCountry":"TR"}}</script>
 <link href="style.css" rel="stylesheet"/>
 <link href="dark.css" rel="stylesheet"/>
-<link href="taslak-ek.css" rel="stylesheet"/></head>
+<link href="taslak-ek.css" rel="stylesheet"/><style>
+/* Arazöz Testi 1: dikey videonun tamamını kırpmadan göster */
+#heroVideo1 { width:100%; height:min(72vh,680px); max-height:680px; object-fit:contain !important; background:#090909; }
+@media (max-width: 640px) { #heroVideo1 { height:min(70vh,620px); } }
+</style>
+</head>
 <body>
 <div class="topline">İmalat • Tamir • Bakım • Araç Üstü Ekipman</div>
 <header class="header">
@@ -39,7 +44,7 @@
 </div>
 <div class="hero-video-container" aria-label="Osmanlı Tanker arazöz test videoları">
 <div class="video-tabs" role="group" aria-label="Video seçimi"><button type="button" class="video-tab active" data-video="1" aria-pressed="true">Arazöz Testi 1</button><button type="button" class="video-tab" data-video="2" aria-pressed="false">Sulama Testi 2</button></div>
-<video id="heroVideo1" class="hero-video" aria-label="Osmanlı Tanker arazöz tanıtım videosu" autoplay muted loop playsinline controls preload="metadata" poster="fotograflar/hero.jpg"><source src="baslik-videosu-genis.mp4" type="video/mp4">Tarayıcınız video oynatmayı desteklemiyor.</video>
+<video id="heroVideo1" class="hero-video" aria-label="Osmanlı Tanker arazöz tanıtım videosu" autoplay muted loop playsinline controls preload="metadata" poster="fotograflar/hero.jpg"><source src="baslik-videosu-genis.mp4?v=20261103" type="video/mp4">Tarayıcınız video oynatmayı desteklemiyor.</video>
 <video id="heroVideo2" class="hero-video" aria-label="Osmanlı Tanker sulama testi videosu" muted loop playsinline controls preload="none" hidden><source src="sulama-testi-2.mp4" type="video/mp4">Tarayıcınız video oynatmayı desteklemiyor.</video>
 <div style="display:flex;justify-content:center;margin:12px 0 6px"><button id="heroSoundToggle" type="button" aria-pressed="false" style="cursor:pointer;background:#c71924;color:#fff;border:0;border-radius:8px;padding:12px 22px;font:inherit;font-weight:700">🔊 Sesi Aç</button></div>
 <p class="video-note">ARAZÖZ TESTLERİMİZ • Sesi açarak izleyebilirsiniz</p></div>
