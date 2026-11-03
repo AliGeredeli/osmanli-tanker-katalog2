@@ -54,3 +54,48 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // İki test videosundan aynı anda yalnızca seçili olanı oynat.
 (()=>{const buttons=[...document.querySelectorAll('.video-tab')];const videos=[document.getElementById('heroVideo1'),document.getElementById('heroVideo2')];buttons.forEach((b,i)=>b.addEventListener('click',()=>{videos.forEach((v,j)=>{if(!v)return;v.hidden=i!==j;if(i!==j)v.pause();else v.play().catch(()=>{});});buttons.forEach((x,j)=>{x.classList.toggle('active',i===j);x.setAttribute('aria-pressed',String(i===j));});}));})();
+
+// Video ses düğmesini aktif sekmeye bağla.
+// Otomatik oynatma sessiz başlar; ses yalnızca kullanıcının tıklamasıyla açılır.
+(() => {
+  const button = document.getElementById('heroSoundToggle');
+  const videos = [document.getElementById('heroVideo1'), document.getElementById('heroVideo2')];
+  const tabs = [...document.querySelectorAll('.video-tab')];
+  if (!button || videos.some(video => !video)) return;
+
+  const activeIndex = () => {
+    const index = tabs.findIndex(tab => tab.classList.contains('active'));
+    return index < 0 ? 0 : index;
+  };
+  const activeVideo = () => videos[activeIndex()];
+  const updateLabel = () => {
+    const video = activeVideo();
+    const audible = !video.muted && video.volume > 0;
+    button.textContent = audible ? '🔇 Sesi Kapat' : '🔊 Sesi Aç';
+    button.setAttribute('aria-pressed', String(audible));
+  };
+
+  // Capture aşamasında işle: eski sayfa içi ses işleyicisi ikinci kez çalışmasın.
+  button.addEventListener('click', event => {
+    event.stopImmediatePropagation();
+    const video = activeVideo();
+    const enableSound = video.muted || video.volume === 0;
+    if (enableSound) {
+      video.muted = false;
+      video.defaultMuted = false;
+      video.removeAttribute('muted');
+      video.volume = 1;
+      if (video.paused) video.play().catch(() => {});
+    } else {
+      video.muted = true;
+    }
+    updateLabel();
+  }, true);
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    // Sekme değişince eski ses durumu seçili videoya göre gösterilir.
+    queueMicrotask(updateLabel);
+  }));
+  videos.forEach(video => video.addEventListener('volumechange', updateLabel));
+  updateLabel();
+})();
