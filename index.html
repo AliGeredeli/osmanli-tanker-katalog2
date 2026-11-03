@@ -41,6 +41,7 @@
 <div class="video-tabs" role="group" aria-label="Video seçimi"><button type="button" class="video-tab active" data-video="1" aria-pressed="true">Arazöz Testi 1</button><button type="button" class="video-tab" data-video="2" aria-pressed="false">Sulama Testi 2</button></div>
 <video id="heroVideo1" class="hero-video" aria-label="Osmanlı Tanker arazöz tanıtım videosu" autoplay muted loop playsinline controls preload="metadata" poster="fotograflar/hero.jpg"><source src="baslik-videosu-genis.mp4" type="video/mp4">Tarayıcınız video oynatmayı desteklemiyor.</video>
 <video id="heroVideo2" class="hero-video" aria-label="Osmanlı Tanker sulama testi videosu" muted loop playsinline controls preload="none" hidden><source src="sulama-testi-2.mp4" type="video/mp4">Tarayıcınız video oynatmayı desteklemiyor.</video>
+<div style="display:flex;justify-content:center;margin:12px 0 6px"><button id="heroSoundToggle" type="button" aria-pressed="false" style="cursor:pointer;background:#c71924;color:#fff;border:0;border-radius:8px;padding:12px 22px;font:inherit;font-weight:700">🔊 Sesi Aç</button></div>
 <p class="video-note">ARAZÖZ TESTLERİMİZ • Sesi açarak izleyebilirsiniz</p></div>
 </section>
 <section class="section about-section" id="hakkimizda"><div class="section-heading"><div><p class="eyebrow">2011'DEN BERİ ANKARA OSTİM'DE</p><h2>Hakkımızda</h2></div></div><div class="about-grid"><div><p>Osmanlı Tanker Araç Üstü Ekipman, 2011 yılından bu yana Ankara Ostim'de tanker, depolama tankı ve araç üstü ekipman imalatı ile tamir ve bakım alanlarında faaliyet göstermektedir. Su tankerleri, arazözler, pompa ve tesisat sistemlerinde ihtiyaçlara yönelik çözümler sunuyoruz.</p></div><div class="about-values"><div><h3>Misyonumuz</h3><p>İşlevsel, dayanıklı ve ihtiyaca uygun imalat ve onarım hizmeti sunmak.</p></div><div><h3>Vizyonumuz</h3><p>Üretim tecrübemiz ve işçilik anlayışımızla sektörde güven duyulan bir çözüm ortağı olmak.</p></div></div></div></section><section class="section" id="urunler">
@@ -86,5 +87,35 @@
 <footer class="footer"><a class="brand footer-brand" href="#anasayfa"><img alt="Osmanlı Tanker logosu" class="brand-logo" src="osmanli-tanker-logo.jpg" decoding="async"/><span class="brand-wordmark"><strong>OSMANLI TANKER</strong><small>ARAÇ ÜSTÜ EKİPMAN</small></span></a><span>© <span id="year"></span> Osmanlı Tanker. Tüm hakları saklıdır.</span><a href="#anasayfa">Yukarı çık ↑</a></footer>
 <a aria-label="WhatsApp ile iletişime geç" class="floating-whatsapp" href="https://wa.me/905376535027?text=Merhaba%2C%20bilgi%20almak%20istiyorum." rel="noopener" target="_blank">WhatsApp ↗</a>
 <script src="script.js"></script>
-<script src="taslak-ek.js"></script></body>
+<script src="taslak-ek.js"></script>
+<script>
+/* Kullanıcı tıklamasıyla video sesini aç/kapat. Otomatik oynatma sessiz kalır. */
+(function () {
+  const button = document.getElementById('heroSoundToggle');
+  const videos = [document.getElementById('heroVideo1'), document.getElementById('heroVideo2')];
+  if (!button || videos.some(v => !v)) return;
+  function currentVideo() { return videos.find(v => !v.hidden && getComputedStyle(v).display !== 'none') || videos[0]; }
+  function updateButton() {
+    const v = currentVideo();
+    const soundOn = !v.muted && v.volume > 0;
+    button.textContent = soundOn ? '🔇 Sesi Kapat' : '🔊 Sesi Aç';
+    button.setAttribute('aria-pressed', String(soundOn));
+  }
+  button.addEventListener('click', function () {
+    const v = currentVideo();
+    if (v.muted || v.volume === 0) {
+      v.muted = false;
+      v.defaultMuted = false;
+      v.volume = 1;
+      if (v.paused) v.play().catch(() => {});
+    } else {
+      v.muted = true;
+    }
+    updateButton();
+  });
+  document.querySelectorAll('.video-tab').forEach(tab => tab.addEventListener('click', () => setTimeout(updateButton, 0)));
+  videos.forEach(v => v.addEventListener('volumechange', updateButton));
+  updateButton();
+})();
+</script></body>
 </html>
